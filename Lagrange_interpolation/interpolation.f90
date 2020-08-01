@@ -1,4 +1,4 @@
-program interp
+program lagrange_interpolation
 	implicit none
 	
 	real, dimension(1:5) :: x1, y1
@@ -26,9 +26,9 @@ end program interp
 subroutine interpol(x, xp, yp, y)
 	implicit none
 	
-	real, intent(in) :: x			! point at which we need to interpolate
-	real, intent(out) :: y		! the interpolated value
-	real, dimension(:), intent(in) :: xp, yp		! given data points
+	real, intent(in) :: x		                ! point at which we need to interpolate
+	real, intent(out) :: y		                ! the interpolated value
+	real, dimension(:), intent(in) :: xp, yp	! given data points
 	integer :: arsize, j, k
 	real :: p, L = 0
 	
